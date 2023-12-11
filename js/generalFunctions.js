@@ -260,7 +260,7 @@ async function loadUserData() {
     USERS = JSON.parse(await getItem("users"));
     console.log("USERS SERVER", USERS);
   } catch (e) {
-    console.error("Loading error:", e);
+    console.info('Loading error:', e);
   }
 }
 
