@@ -72,8 +72,7 @@ function renderContactsInInitialList() {
   CONTACTS.forEach((contact) => {
     const firstInitial = contact.initials.charAt(0);
     const indexOfContact = CONTACTS.indexOf(contact);
-    document.getElementById(`contactsLetter${firstInitial}`).innerHTML +=
-      renderContactsInInitialListHtml(contact, indexOfContact);
+    document.getElementById(`contactsLetter${firstInitial}`).innerHTML += renderContactsInInitialListHtml(contact, indexOfContact);
   });
   toggleClass("loadingContainer", "d-none");
 }
@@ -130,9 +129,7 @@ async function playAnimationContactDetails() {
   if (bigScreen()) {
     await playAnimation("mainInfosContact", "animation-slideInRight");
     setTimeout(() => {
-      document
-        .getElementById("mainInfosContact")
-        .classList.remove("animation-slideInRight");
+      document.getElementById("mainInfosContact").classList.remove("animation-slideInRight");
     }, 1000);
   }
 }
@@ -142,8 +139,7 @@ async function playAnimationContactDetails() {
  */
 function renderContactDetails() {
   document.getElementById("mainInfosContact").innerHTML = "";
-  document.getElementById("mainInfosContact").innerHTML =
-    renderContactDetailsHtml();
+  document.getElementById("mainInfosContact").innerHTML = renderContactDetailsHtml();
 }
 
 /**

@@ -1,5 +1,4 @@
 //SEARCH FOR TASKS
-
 let searchText = [];
 let todoCards = [];
 let inProgressCards = [];
@@ -17,6 +16,7 @@ function searchTask(event) {
   searchInAllTasks();
 }
 
+
 /**
  * Sets the searched text based on the input value.
  * @param {Event} event - The input event object.
@@ -25,17 +25,17 @@ function setSearchedText(event) {
   searchText = event.target.value.toLowerCase();
 }
 
+
 /**
  * Summarizes the tasks of each process step by selecting the respective cards.
  */
 function summarizeTasksOfOneProcessStep() {
   todoCards = document.querySelectorAll("#todo .singleCard");
   inProgressCards = document.querySelectorAll("#inProgress .singleCard");
-  awaitingFeedbackCards = document.querySelectorAll(
-    "#awaitingFeedback .singleCard"
-  );
+  awaitingFeedbackCards = document.querySelectorAll("#awaitingFeedback .singleCard");
   doneCards = document.querySelectorAll("#done .singleCard");
 }
+
 
 /**
  * Hides all tasks by hiding the specified cards.
@@ -46,6 +46,7 @@ function hideAllTasks() {
   hideCards(awaitingFeedbackCards);
   hideCards(doneCards);
 }
+
 
 /**
  * Hides the specified cards.
@@ -76,9 +77,7 @@ function searchInAllTasks() {
 function searchInCards(cards) {
   cards.forEach((card) => {
     const title = card.querySelector(".title").textContent.toLowerCase();
-    const description = card
-      .querySelector(".description")
-      .textContent.toLowerCase();
+    const description = card.querySelector(".description").textContent.toLowerCase();
 
     if (title.includes(searchText) || description.includes(searchText)) {
       card.style.display = "flex";

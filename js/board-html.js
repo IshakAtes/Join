@@ -1,13 +1,16 @@
-function renderTasksHtml(
-  indexOfTask,
-  task,
-  colorCategory,
-  amountSubtasks,
-  amountFinishedSubtasks,
-  classSubtasts
-) {
+/**
+ * render Tasks HTML-CODE
+ * @param {number} indexOfTask 
+ * @param {object} task 
+ * @param {string} colorCategory 
+ * @param {number} amountSubtasks 
+ * @param {number} amountFinishedSubtasks 
+ * @param {string} classSubtasts 
+ * @returns 
+ */
+function renderTasksHtml(indexOfTask, task, colorCategory, amountSubtasks, amountFinishedSubtasks, classSubtasts) {
   return /*html*/ `
-  <div draggable="true" ondragstart="startDragging(${indexOfTask})" id="task${indexOfTask}" class="singleCard" onclick="openTaskDetails(${indexOfTask},${colorCategory})">
+  <div draggable="true" ondragstart="startDragging(${indexOfTask})" id="task${indexOfTask}" class="singleCard" onclick="openTaskDetails(${indexOfTask}, ${colorCategory})">
     <div class="headTaskCard">
       <div class="category fontSize14px ${colorCategory}">${task.category}</div>
       <div onclick="event.stopPropagation()" class="containerArrows">
@@ -19,23 +22,25 @@ function renderTasksHtml(
     <span class="description fontSize14px">${task.description}</span>
     <div class="${classSubtasts}">
       <div class="progress">
-        <div class="progress-bar" style="width: ${getPercentageProgress(
-          amountSubtasks,
-          amountFinishedSubtasks
-        )}" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar" style="width: ${getPercentageProgress(amountSubtasks, amountFinishedSubtasks)}" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <span id="progressAmount">${amountFinishedSubtasks}/${amountSubtasks} Done</span>
     </div>
     <div class="contactsAndPrio">
       <div class="assignedContacts" id="contacts${indexOfTask}"></div>
-      <img class="prio" src="../assets/img/${
-        task.priority
-      }.svg" alt="icon to show priority">
+      <img class="prio" src="../assets/img/${task.priority}.svg" alt="icon to show priority">
     </div>
   </div>
 `;
 }
 
+
+/**
+ * Render Task Card HTML-CODE
+ * @param {string} colorCategory 
+ * @param {string} colorPrio 
+ * @returns 
+ */
 function renderTaskDetailsHtml(colorCategory, colorPrio) {
   return /*html*/ `
       <div onclick="event.stopPropagation()" class="displayEdit">
@@ -69,9 +74,17 @@ function renderTaskDetailsHtml(colorCategory, colorPrio) {
           <button onclick="renderEditTask()" class="editBtn"><img src="../assets/img/boardEditTask.svg" alt="icon to edit task"></button>
         </div>
       </div>  
-    `;
+  `;
 }
 
+
+/**
+ * Render Contacts in Task Card
+ * @param {string} name 
+ * @param {string} initials 
+ * @param {string} color 
+ * @returns 
+ */
 function renderContactsInDetailCardHtml(name, initials, color) {
   return /*html*/ `
       <div class="singleContact">
@@ -81,19 +94,27 @@ function renderContactsInDetailCardHtml(name, initials, color) {
     `;
 }
 
-function renderSubtasksInDetailCardHtml(
-  name,
-  status,
-  indexOfSubtask,
-  indexOfTask
-) {
+
+/**
+ * Render Subtasks in Task Card HTML-CODE
+ * @param {string} name 
+ * @returns 
+ */
+function renderSubtasksInDetailCardHtml(name, status, indexOfSubtask, indexOfTask) {
   return /*html*/ `
       <div class="singleSubtask">
-         <span>${name}</span>
+        <span>${name}</span>
       </div>
     `;
 }
 
+
+/**
+ * Render Contacts initials in Task Card HTML-CODE
+ * @param {string} initials 
+ * @param {string} color 
+ * @returns 
+ */
 function renderContactsInTaskCardsHtml(initials, color) {
   return /*html*/ `
       <div class="initialsOfNames smallCircle" style="background-color:${color}">${initials}</div>

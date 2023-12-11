@@ -6,8 +6,7 @@
 function renderEditContact() {
   showDisplay("contentEditDisplay", "animation-slideInRight", "d-none");
   toggleClass("body", "overflowHidden");
-  document.getElementById("contentEditDisplay").innerHTML =
-    renderEditContactHtml();
+  document.getElementById("contentEditDisplay").innerHTML = renderEditContactHtml();
 }
 
 /**
@@ -15,11 +14,7 @@ function renderEditContact() {
  * @returns {object} The edited contact object with name, email, and phone properties.
  */
 function getDataEditContact() {
-  let editedContact = {
-    name: editContactName.value,
-    email: editContactEmail.value,
-    phone: editContactPhone.value,
-  };
+  let editedContact = {name: editContactName.value, email: editContactEmail.value, phone: editContactPhone.value,};
   checkEditContactData(editedContact);
 }
 
@@ -30,10 +25,7 @@ function getDataEditContact() {
  */
 function checkEditContactData(editedContact) {
   const filteredContacts = filterContacts();
-  const foundExistingEmail = findExistingEmail(
-    filteredContacts,
-    editContactEmail.value
-  );
+  const foundExistingEmail = findExistingEmail(filteredContacts, editContactEmail.value);
   if (foundExistingEmail) {
     showError("errorEmailIsAlreadyTaken");
   } else {

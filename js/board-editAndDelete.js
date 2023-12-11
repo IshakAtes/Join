@@ -105,9 +105,7 @@ function setSubtasksToEditDisplay() {
  * @param {number} indexOfSubtask - The index of the subtask.
  */
 async function changeStatusSubtask(indexOfTask, indexOfSubtask) {
-  const checkbox = document.getElementById(
-    `task${indexOfTask}subtask${indexOfSubtask}`
-  );
+  const checkbox = document.getElementById(`task${indexOfTask}subtask${indexOfSubtask}`);
   let status;
   if (checkbox.checked) {
     status = "checked";

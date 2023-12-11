@@ -42,11 +42,7 @@ function setEventsBoard() {
  * @param {string} id - The ID of the image element.
  */
 function setEventsImageHoverAddTask(id) {
-  changeImageOnHover(
-    id,
-    "../assets/img/boardPlusBrightBlue.svg",
-    "../assets/img/boardPlus.svg"
-  );
+  changeImageOnHover(id, "../assets/img/boardPlusBrightBlue.svg", "../assets/img/boardPlus.svg");
 }
 
 /*SHOW TASKS IN BOARD***********************************************************************************/
@@ -85,14 +81,7 @@ function setDataTaskCard(task) {
   const amountSubtasks = task.subtasks.length;
   const classSubtasts = getStyleClassForSubtasks(amountSubtasks);
   const amountFinishedSubtasks = countAmountOfFinishedSubtasks(task);
-  document.getElementById(processStep).innerHTML += renderTasksHtml(
-    indexOfTask,
-    task,
-    colorCategory,
-    amountSubtasks,
-    amountFinishedSubtasks,
-    classSubtasts
-  );
+  document.getElementById(processStep).innerHTML += renderTasksHtml(indexOfTask, task, colorCategory, amountSubtasks, amountFinishedSubtasks, classSubtasts);
   renderContactsInTaskCards(indexOfTask, contactsIds);
 }
 
@@ -306,11 +295,7 @@ function openTaskDetails(indexOfTask) {
   renderTaskDetails();
   toggleClass("body", "overflowHidden");
   showDisplay("containerDetails", "animation-slideInRight", "d-none");
-  changeImageOnHover(
-    "deleteBtnImage",
-    "../assets/img/boardDeleteTaskBrightBlue.svg",
-    "../assets/img/boardDeleteTaskDarkBlue.svg"
-  );
+  changeImageOnHover("deleteBtnImage", "../assets/img/boardDeleteTaskBrightBlue.svg", "../assets/img/boardDeleteTaskDarkBlue.svg");
 }
 
 /**
@@ -320,10 +305,7 @@ function renderTaskDetails() {
   const colorCategory = getColorCategory(SELECTED_TASK.category);
   const colorPrio = getColorOfPrio(SELECTED_TASK.priority);
   document.getElementById("containerDetails").innerHTML = "";
-  document.getElementById("containerDetails").innerHTML = renderTaskDetailsHtml(
-    colorCategory,
-    colorPrio
-  );
+  document.getElementById("containerDetails").innerHTML = renderTaskDetailsHtml(colorCategory, colorPrio);
   renderContactsInDetailCard();
   renderSubtasksInDetailCard();
 }
@@ -350,8 +332,7 @@ function renderYouContactInDetailCard() {
   const name = "You";
   const initials = "You";
   const color = LOGGED_USER.color;
-  document.getElementById("assignedContactsDetailCard").innerHTML +=
-    renderContactsInDetailCardHtml(name, initials, color);
+  document.getElementById("assignedContactsDetailCard").innerHTML += renderContactsInDetailCardHtml(name, initials, color);
 }
 
 /**
@@ -364,8 +345,7 @@ function renderSavedContactsInDetailCard(contactId) {
     const name = contactData.name;
     const initials = contactData.initials;
     const color = contactData.color;
-    document.getElementById("assignedContactsDetailCard").innerHTML +=
-      renderContactsInDetailCardHtml(name, initials, color);
+    document.getElementById("assignedContactsDetailCard").innerHTML += renderContactsInDetailCardHtml(name, initials, color);
   }
 }
 
@@ -380,7 +360,6 @@ function renderSubtasksInDetailCard() {
     const name = subtask.name;
     const status = subtask.status;
     const indexOfSubtask = subtasks.indexOf(subtask);
-    document.getElementById("containerSubtasks").innerHTML +=
-      renderSubtasksInDetailCardHtml(name, status, indexOfSubtask, indexOfTask);
+    document.getElementById("containerSubtasks").innerHTML += renderSubtasksInDetailCardHtml(name, status, indexOfSubtask, indexOfTask);
   });
 }
