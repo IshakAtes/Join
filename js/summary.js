@@ -36,16 +36,8 @@ async function loadDataAndRenderSummary() {
  * Sets event listeners for image elements to change their source on hover.
  */
 function setEventsSummary() {
-  changeImageOnHover(
-    "pencilLogo",
-    "../assets/img/toDosPencilWhite.svg",
-    "../assets/img/toDosPencilBlue.svg"
-  );
-  changeImageOnHover(
-    "doneCheck",
-    "../assets/img/doneCheckWhite.svg",
-    "../assets/img/doneCheckBlue.svg"
-  );
+  changeImageOnHover("pencilLogo", "../assets/img/toDosPencilWhite.svg", "../assets/img/toDosPencilBlue.svg");
+  changeImageOnHover("doneCheck", "../assets/img/doneCheckWhite.svg", "../assets/img/doneCheckBlue.svg");
 }
 
 /*GREETING**********************************************************************************************************/
@@ -265,10 +257,8 @@ function formatDueDate(date) {
  */
 async function renderSummary() {
   document.getElementById("tasksInBoard").innerHTML = AMOUNT_TASKS_IN_BOARD;
-  document.getElementById("tasksInProgress").innerHTML =
-    AMOUNT_TASKS_IN_PROGRESS;
-  document.getElementById("tasksAwaitingFeedback").innerHTML =
-    AMOUNT_TASKS_AWAITING_FEEDBACK;
+  document.getElementById("tasksInProgress").innerHTML = AMOUNT_TASKS_IN_PROGRESS;
+  document.getElementById("tasksAwaitingFeedback").innerHTML = AMOUNT_TASKS_AWAITING_FEEDBACK;
   document.getElementById("tasksUrgent").innerHTML = AMOUNT_TASKS_URGENT;
   document.getElementById("upcomingDeadline").innerHTML = NEXT_DUE_DATE;
   document.getElementById("tasksToDo").innerHTML = AMOUNT_TASKS_TO_DO;

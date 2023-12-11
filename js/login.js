@@ -62,9 +62,7 @@ function checkIfRememberMeActiv() {
  * Displays an error message indicating that the provided data is incorrect.
  */
 function wrongData() {
-  const dataIncorrect = document
-    .getElementById("dataIncorrect")
-    .classList.remove("d-none");
+  const dataIncorrect = document.getElementById("dataIncorrect").classList.remove("d-none");
 }
 
 /**

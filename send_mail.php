@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$redirect = 'http://laura-hesidenz.developerakademie.net/Join/templates/emailHasBeenSent.html';
+$redirect = 'http://ishak-ates.developerakademie.net/Join/templates/emailHasBeenSent.html';
 
 ########### CONFIG END ###########
 

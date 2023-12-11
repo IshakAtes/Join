@@ -78,7 +78,5 @@ async function showAnimationNewPasswordSuccess() {
  */
 function disableButton() {
   document.getElementById("continueResetPasswordBtn").disabled = true;
-  document
-    .getElementById("continueResetPasswordBtn")
-    .classList.add("disableButton");
+  document.getElementById("continueResetPasswordBtn").classList.add("disableButton");
 }

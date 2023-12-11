@@ -89,12 +89,7 @@ function changeImageOnHover(elementId, imgSrcOnHover, imgSrcOnMouseOut) {
  * @param {string} imgSrcOnHover - The image source on hover.
  * @param {string} imgSrcOnMouseOut - The image source on mouseout.
  */
-function setEventChangeImageOnHover(
-  element,
-  parent,
-  imgSrcOnHover,
-  imgSrcOnMouseOut
-) {
+function setEventChangeImageOnHover(element, parent, imgSrcOnHover, imgSrcOnMouseOut) {
   element.addEventListener("mouseover", () => {
     element.src = imgSrcOnHover;
   });
@@ -131,16 +126,8 @@ function getDataFromInput(id, idError) {
  * Sets event listeners to change images on hover on the add Task display.
  */
 function setEventListenerHoverBtn() {
-  changeImageOnHover(
-    "clearBtnIcon",
-    "../assets/img/addTaskCancelBright.svg",
-    "../assets/img/addTaskCancelDark.svg"
-  );
-  changeImageOnHover(
-    "clearBtnIcon",
-    "../assets/img/addTaskCancelBright.svg",
-    "../assets/img/addTaskCancelDark.svg"
-  );
+  changeImageOnHover("clearBtnIcon", "../assets/img/addTaskCancelBright.svg", "../assets/img/addTaskCancelDark.svg");
+  changeImageOnHover("clearBtnIcon", "../assets/img/addTaskCancelBright.svg", "../assets/img/addTaskCancelDark.svg");
 }
 
 /**
@@ -220,15 +207,7 @@ function showError(id) {
  * @returns {string} A randomly selected color from the predefined set.
  */
 function getRandomColor() {
-  const colors = [
-    "#FC71FF",
-    "#29ABE2",
-    "#02CF2F",
-    "#AF1616",
-    "#462F8A",
-    "#FFC700",
-    "#9327FF",
-  ];
+  const colors = ["#FC71FF", "#29ABE2", "#02CF2F", "#AF1616", "#462F8A", "#FFC700", "#9327FF",];
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 }

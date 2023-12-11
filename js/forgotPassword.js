@@ -37,7 +37,6 @@ function saveEmailToResetPassword() {
  * Sends the reset email.
  */
 function sendResetEmail() {
-  document.querySelector("form").action =
-    "http://laura-hesidenz.developerakademie.net/Join/send_mail.php";
+  document.querySelector("form").action = "http://ishak-ates.developerakademie.net/Join/send_mail.php";
   document.querySelector("form").submit();
 }
