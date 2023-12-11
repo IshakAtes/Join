@@ -1,3 +1,9 @@
+/**
+ * Rendering Category in list
+ * @param {string} name 
+ * @param {string} color 
+ * @returns 
+ */
 function renderCategorysHtml(name, color) {
   return /*html*/ `
       <li onclick="renderSelectedCategory('${name}','${color}')" class="singleCategory">
@@ -7,6 +13,12 @@ function renderCategorysHtml(name, color) {
     `;
 }
 
+/**
+ * Render Categorie and show it
+ * @param {string} name 
+ * @param {string} color 
+ * @returns 
+ */
 function renderSelectedCategoryHtml(name, color) {
   return /*html*/ `
     <li class="selectedCategory">
@@ -16,6 +28,12 @@ function renderSelectedCategoryHtml(name, color) {
   `;
 }
 
+/**
+ * Render Contacts in Contactslist
+ * @param {string} name 
+ * @param {string} id 
+ * @returns 
+ */
 function renderContactsHtml(name, id) {
   return /*html*/ `
       <li class="oneContact" onclick="event.stopPropagation();">
@@ -26,6 +44,13 @@ function renderContactsHtml(name, id) {
     `;
 }
 
+/**
+ * Rendering Subtasks
+ * @param {string} subtask 
+ * @param {number} indexOfSubtask 
+ * @param {boolean} status 
+ * @returns 
+ */
 function renderSubtasksHtml(subtask, indexOfSubtask, status) {
   return /*html*/ `
       <div class="singleSubtask">

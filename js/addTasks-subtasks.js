@@ -23,11 +23,7 @@ function renderSubtasks() {
   SUBTASKS.forEach((subtask) => {
     const indexOfSubtask = SUBTASKS.indexOf(subtask);
     const status = subtask.status;
-    document.getElementById("subtasks").innerHTML += renderSubtasksHtml(
-      subtask,
-      indexOfSubtask,
-      status
-    );
+    document.getElementById("subtasks").innerHTML += renderSubtasksHtml(subtask, indexOfSubtask, status);
   });
 }
 

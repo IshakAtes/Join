@@ -111,10 +111,7 @@ function renderSavedContacts() {
   CONTACTS.forEach((contact) => {
     const name = contact.name;
     const id = contact.id;
-    document.getElementById("savedContacts").innerHTML += renderContactsHtml(
-      name,
-      id
-    );
+    document.getElementById("savedContacts").innerHTML += renderContactsHtml(name, id);
   });
 }
 
@@ -226,9 +223,7 @@ function getCategory() {
  * @returns {number[]} An array of contact IDs.
  */
 function getSelectedCheckBoxes() {
-  const selectedCheckBoxes = document.querySelectorAll(
-    '#listContacts input[type="checkbox"]:checked'
-  );
+  const selectedCheckBoxes = document.querySelectorAll('#listContacts input[type="checkbox"]:checked');
   if (selectedCheckBoxes.length > 0) {
     return getContactsId(selectedCheckBoxes);
   } else {
@@ -320,9 +315,7 @@ function clearTask() {
  * Clears the checked contacts in the dropdown list.
  */
 function clearCheckedContacts() {
-  const checkboxes = document.querySelectorAll(
-    '.listDropDown input[type="checkbox"]'
-  );
+  const checkboxes = document.querySelectorAll('.listDropDown input[type="checkbox"]');
   checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
