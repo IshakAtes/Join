@@ -1,0 +1,424 @@
+/*HEADER*/
+
+.headerBoard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.containerSearchTasks {
+  width: 225px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 200px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+}
+
+.containerSearchTasksContent {
+  width: 226px;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.containerSearchTasksContent img {
+  width: 40px;
+  padding-right: 10px;
+}
+
+.containerSearchTasks input {
+  width: 100px;
+  height: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  padding-left: 12px;
+  border: 0;
+}
+
+.containerSearchTasks input:focus {
+  outline: none !important;
+}
+
+.headerBoard button {
+  width: 131px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+/*MAIN*/
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+section {
+  width: 23%;
+}
+
+.processStep {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px;
+}
+
+.processStep span {
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.processStep img {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+#todo,
+#inProgress,
+#awaitingFeedback,
+#done {
+  height: 95vh;
+}
+
+/*SINGLE CARD*/
+
+.singleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 18px 19px;
+  gap: 17px;
+  background-color: var(--bright-white);
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.category {
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 15px 3px 15px;
+  color: var(--bright-white);
+  border-radius: 8px;
+}
+
+.description {
+  color: #a8a8a8;
+}
+
+.progressContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress {
+  width: 100px;
+  border-radius: 2px;
+  background-color: var(--grey);
+}
+
+.progress-bar {
+  height: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--grey);
+  text-align: center;
+  white-space: nowrap;
+  background-color: #29abe2;
+}
+
+#progressAmount {
+  font-size: 12px;
+}
+
+.contactsAndPrio {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.assignedContacts .initialsOfNames:not(:first-child) {
+  margin-left: -8px;
+}
+
+.initialsOfNames {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bright-white);
+  border-radius: 100px;
+  text-align: center;
+}
+
+.smallCircle {
+  font-size: 14px;
+  border: 1px solid var(--bright-white);
+  width: 37px;
+  height: 37px;
+}
+
+/*EDIT TASKS-DISPLAY*/
+
+#containerEdit,
+#containerDetails {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.displayEdit {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  background: var(--bright-white);
+}
+
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headContainer img {
+  width: 25px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#titleDisplay {
+  font-size: 25px;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+#descriptionDisplay {
+  font-size: 15px;
+}
+
+.containerSectionBoard {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+#priorityDisplay {
+  width: 81px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+}
+
+#priorityDisplay:hover {
+  box-shadow: none !important;
+  cursor: default !important;
+}
+
+#priorityDisplay img {
+  width: 11px;
+  height: 15px;
+}
+
+.containerAssignedTo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.assignedContacts {
+  display: flex;
+}
+
+.singleContact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.singleContact span {
+  font-size: 15px;
+}
+
+.btnContainer {
+  width: 95px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.deleteBtn {
+  width: 50%;
+  height: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: unset;
+  padding: 4px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.deleteBtn:hover {
+  background-color: unset !important;
+  transition: 0.5s;
+}
+
+.deleteBtn img {
+  width: 15px;
+  height: 18px;
+}
+
+.editBtn {
+  width: 50%;
+  height: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.deleteBtn:hover {
+  transition: 0.5s;
+}
+
+.editBtn img {
+  width: 15px;
+  height: 18px;
+}
+
+#assignedContactsDetailCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 130px;
+  overflow-y: scroll;
+}
+
+.subtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: unset;
+}
+
+.containerDisplayEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.okayBtnEditTaskContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.okayBtnEditTaskContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  padding: 10px;
+}
+
+.okayBtnEditTaskContainer img {
+  width: 15px;
+  height: 15px;
+}
+
+#contentAddTaskDisplay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+#displayAddTask {
+  position: relative;
+  padding: 40px 20px 40px 20px;
+  background: var(--bright-white);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  z-index: 2;
+}
+
+#closeDisplay {
+  display: flex !important;
+  top: -25px !important;
+  right: -5px !important;
+}
+
+#containerSubtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headTaskCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.containerArrows {
+  display: none;
+  align-items: center;
+  gap: 15px;
+}
+
+.headTaskCard img {
+  width: 23px;
+  height: 23px;
+}

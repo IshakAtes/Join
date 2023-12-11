@@ -1,0 +1,111 @@
+/*LOGIN*/
+
+.animate-fadeOpacityOut {
+  animation: fadeOpacityOut 0.8s ease normal forwards;
+}
+
+.animate-joinlogo {
+  animation: joinlogo 0.8s ease normal forwards;
+}
+
+@keyframes fadeOpacityOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes joinlogo {
+  0% {
+    transform: scale(1.6) translate(400%, 150%);
+  }
+  100% {
+    transform: scale(1) translate(0);
+  }
+}
+
+/*DISPLAYS*/
+
+.animation-slideInRight {
+  animation: slideInRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(var(--header-width));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animation-slideOutRight {
+  animation: slideOutRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(987px);
+  }
+}
+
+/*HEADER*/
+
+.animation-menuSlideInRight {
+  animation: menuSlideInRight 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes menuSlideInRight {
+  from {
+    transform: translateX(var(--header-width));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*CONTACTS*/
+
+.animation-moveUpAndShake {
+  animation: moveUpAndShake 2s ease-in-out forwards;
+}
+
+@keyframes moveUpAndShake {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -300px);
+  }
+  55% {
+    transform: translate(-50%, -300px) rotate(-5deg);
+  }
+  60% {
+    transform: translate(-50%, -300px) rotate(5deg);
+  }
+  65% {
+    transform: translate(-50%, -300px) rotate(-5deg);
+  }
+  70% {
+    transform: translate(-50%, -300px) rotate(5deg);
+  }
+  75% {
+    transform: translate(-50%, -300px) rotate(0);
+  }
+  85% {
+    transform: translate(-50%, -300px) rotate(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -300px);
+  }
+}

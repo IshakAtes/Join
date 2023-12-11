@@ -1,0 +1,65 @@
+@media only screen and (max-width: 760px) {
+  .mainContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 95%;
+  }
+
+  .partingLine {
+    display: none;
+  }
+
+  .singlePrioBtn {
+    width: 33%;
+    font-size: 13px;
+  }
+
+  .clearAndCreateBtns {
+    position: unset;
+  }
+
+  .titleBigScreen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .clearAndCreateBtns span {
+    width: unset;
+    display: none;
+  }
+
+  #clearBtn,
+  #createBtn {
+    width: 35px;
+  }
+
+  #createBtn img {
+    width: 16px;
+    height: 21px;
+  }
+
+  .clearAndCreateBtns button {
+    width: 32px !important;
+    height: 31px;
+    justify-content: center;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #containerAdd {
+    align-items: flex-start;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .displayEdit {
+    width: 81%;
+  }
+}

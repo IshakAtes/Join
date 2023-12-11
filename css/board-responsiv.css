@@ -1,0 +1,119 @@
+@media only screen and (max-width: 1500px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  #todo,
+  #inProgress,
+  #awaitingFeedback,
+  #done {
+    min-height: 250px;
+    height: unset;
+  }
+
+  section {
+    width: 45%;
+  }
+
+  .displayEdit {
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    background: var(--bright-white);
+  }
+
+  #titleDisplay {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #contentAddTaskDisplay {
+    height: 99vh;
+    position: fixed;
+    top: 4px;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    align-items: unset;
+    z-index: 3;
+  }
+
+  #displayAddTask {
+    width: 80%;
+    overflow-y: scroll;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .rightSection {
+    position: unset !important;
+  }
+
+  .closeDisplayLeftSectionDiv {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #closeDisplayLeftSection {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  #closeDisplay {
+    display: none;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .headerBoard {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .headerBoard button {
+    display: none;
+  }
+
+  .containerSearchTasks {
+    position: unset;
+  }
+
+  .addTaskMobile {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    display: flex !important;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  main {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .containerArrows {
+    display: flex !important;
+  }
+}

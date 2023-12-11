@@ -1,0 +1,26 @@
+<span class="headline">Kanban Project Management Tool</span>
+<div class="options">
+  <img
+    onclick="loadTemplate('../templates/summary.html')"
+    class="logoDark cursorPointer"
+    src="../assets/img/logoDark.svg"
+    alt="icon of logo" />
+  <a href="help.html"
+    ><img
+      class="questionMark"
+      src="../assets/img/headerQuestionmark.svg"
+      alt="icon of question mark" />
+  </a>
+  <div onclick="openMenu()" class="profilImageDiv">
+    <img
+      class="profilImage"
+      src="../assets/img/contactsNewImage.svg"
+      alt="profile image" />
+  </div>
+  <div id="menuHeader" class="d-none">
+    <a href="help.html" class="optionMenu">Help</a>
+    <a href="legalNotice.html" class="optionMenu">Legal notice</a>
+    <a onclick="logOut()">Log out</a>
+  </div>
+</div>
+<div onclick="closeMenu()" id="menuHeaderBg" class="d-none"></div>

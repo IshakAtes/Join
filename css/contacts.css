@@ -1,0 +1,306 @@
+a {
+  color: #007cee;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.gap {
+  gap: 30px;
+}
+
+/*HEAD-CONTAINER*/
+
+.headContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.partingLineBlue {
+  width: 0px;
+  height: 59px;
+  border: 3px solid #29abe2;
+}
+
+/*CONTENT*/
+
+#content {
+  position: absolute;
+  left: var(--nav-width);
+  top: var(--header-height);
+  right: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/*CONTACT-LIST*/
+
+#contactList {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 300px;
+  max-width: 380px;
+  padding: var(--padding);
+  padding-left: 60px;
+  padding-right: 60px;
+  background: var(--bright-white);
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+  overflow-y: scroll;
+  font-size: 15px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.oneSection {
+  margin-bottom: 15px;
+}
+
+.partingLineGrey {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+}
+
+.singleContact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 12px;
+  border-radius: 15px;
+}
+
+.singleContact:hover {
+  background-color: var(--dark-blue);
+  color: var(--bright-white);
+  cursor: pointer;
+}
+
+.initialsOfNames {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bright-white);
+  border-radius: 100px;
+  width: 25px;
+  height: 19px;
+}
+
+.smallCircle {
+  font-size: 15px;
+  margin-left: 10px;
+  border: 2px solid var(--bright-white);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  width: 41px;
+  height: 41px;
+}
+
+#deatilsOfUSer span {
+  font-size: 20px;
+}
+
+#deatilsOfUSer a {
+  font-size: 13.5px;
+}
+
+/*CONTACT-DETAILS*/
+
+#contactDetails {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--padding);
+  padding-top: var(--padding);
+  padding-right: var(--padding);
+}
+
+/*CONTACT-MAIN*/
+
+#mainInfosContact {
+  display: flex;
+  flex-direction: column;
+}
+
+.addTaskToContact {
+  display: flex;
+  align-items: center;
+}
+
+.bigCircle {
+  font-size: 25px;
+  border: 4px solid var(--bright-white);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  width: 65px;
+  height: 65px;
+}
+
+.nameAndAddTask {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.addTask {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.addTask img {
+  width: 15px;
+  height: 15px;
+}
+
+.editContact {
+  display: flex;
+  align-items: center;
+}
+
+.editContact a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark-blue);
+}
+
+.editContact img {
+  width: 18px;
+  height: 18px;
+}
+
+.editContact span {
+  font-size: 13px;
+}
+
+#editContactName,
+#editContactEmail,
+#editContactPhone {
+  width: 100% !important;
+}
+
+.error {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  color: #f24822;
+  font-size: 12px !important;
+}
+
+.emailAndPhone {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailAndPhone span {
+  font-size: 14px;
+}
+
+.email,
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.phone a,
+.email a {
+  display: inline-block;
+  width: fit-content;
+}
+
+.newContactBtnContainer {
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+}
+
+.newContactBtn {
+  width: 160px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.newContactBtn img {
+  width: 18px;
+  height: 18px;
+}
+
+.editContactMobileBtnContainer {
+  display: none;
+}
+
+#contactCreatedSucess,
+#contactDeletedSucess {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 250px;
+  z-index: 5;
+  cursor: none;
+  pointer-events: none;
+}
+
+#contactCreatedSucess button,
+#contactDeletedSucess button {
+  width: 100% !important;
+}
+
+#closeDisplay {
+  display: flex !important;
+  top: -25px !important;
+  right: -5px !important;
+}
+
+#contentAddTaskDisplay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+#displayAddTask {
+  position: relative;
+  padding: 40px 20px 40px 20px;
+  background: var(--bright-white);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  z-index: 2;
+}
+
+#loadingContainer {
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

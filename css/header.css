@@ -1,0 +1,99 @@
+header {
+  height: var(--header-height);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--padding);
+  padding-right: 60px;
+  background: var(--bright-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headline {
+  padding-left: 235px;
+}
+
+.options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoDark {
+  display: none;
+  width: 30px;
+  height: 60px;
+}
+
+.profilImageDiv {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+  background: var(--grey);
+  width: 35px;
+  height: 35px;
+}
+
+.profilImage {
+  width: 17px;
+  height: 20px;
+}
+
+#optionsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 80px;
+  margin-right: var(--padding);
+  color: var(--bright-white);
+  background: var(--dark-blue);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0px 10px 10px;
+}
+
+#menuHeaderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: transparent;
+}
+
+#menuHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  padding: 10px 0px;
+  background-color: var(--dark-blue);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0px 10px 10px;
+  color: var(--bright-white);
+  z-index: 300;
+}
+
+#menuHeader a {
+  padding: 5px 10px;
+  color: var(--bright-white);
+}
+
+#menuHeader a:hover {
+  background-color: var(--dark-blue-selected);
+}
+
+.optionMenu {
+  display: none;
+}

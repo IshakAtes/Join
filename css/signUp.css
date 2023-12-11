@@ -1,0 +1,17 @@
+.error {
+  margin-top: -8px;
+  color: #f24822;
+  font-size: 12px !important;
+}
+
+.inputContainer {
+  width: 100%;
+}
+
+#loadingContainer {
+  left: 0;
+}
+
+input {
+  font-size: 17px;
+}

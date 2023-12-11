@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join - Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoWhite.svg" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/general-responsiv.css" />
+    <link rel="stylesheet" href="../css/signUp.css" />
+    <link rel="stylesheet" href="../css/signUp-responsiv.css" />
+    <script src="../js/storage.js"></script>
+    <script src="../js/globalVariables.js"></script>
+    <script src="../js/generalFunctions.js"></script>
+    <script src="../js/sampleData.js"></script>
+    <script src="../js/signUp.js"></script>
+  </head>
+  <body onload="initSignUp()">
+    <!--LOADING CONTAINER-->
+    <div id="loadingContainer" class="d-none">
+      <img src="../assets/img/spinner-loading.svg" alt="loading image" />
+    </div>
+    <div class="contentBeforeLogin">
+      <div class="logoDiv">
+        <img src="../assets/img/logoDark.svg" alt="logo of join" />
+      </div>
+
+      <div class="display padding">
+        <div class="displayHeader">
+          <img
+            onclick="window.location.href='../index.html'"
+            class="arrowBackBlue"
+            src="../assets/img/arrowBackBlue.svg"
+            alt="arrow to get back" />
+          <h1 class="title">Sign up</h1>
+        </div>
+        <div class="blueLine marginTop"></div>
+        <form class="form marginTop" onsubmit="checkSignUpData(); return false">
+          <div class="inputContainer">
+            <input
+              required
+              id="signUpName"
+              class="input inputName"
+              type="name"
+              placeholder="Name"
+              maxlength="25"
+              minlength="2"
+              required />
+          </div>
+          <div class="inputContainer">
+            <input
+              required
+              id="signUpEmail"
+              class="input inputEmail"
+              type="email"
+              placeholder="Email"
+              maxlength="25"
+              minlength="2"
+              required />
+            <span class="d-none error" id="userIsAlreadyRegistered"
+              >Please enter a new email. User is already registred</span
+            >
+          </div>
+          <div class="inputContainer">
+            <input
+              required
+              id="signUpPassword"
+              class="input inputPassword"
+              type="password"
+              placeholder="Password"
+              required />
+          </div>
+          <button id="signUpButton">Sign up</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
