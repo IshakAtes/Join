@@ -17,10 +17,7 @@ function setEventCloseDropDown() {
 function closeDropDown() {
   document.addEventListener("click", handleClickOnPage);
   function handleClickOnPage(event) {
-    if (
-      !event.target.closest("#selectContactsDiv") ||
-      !event.target.closest("#selectCategoryDiv")
-    ) {
+    if (!event.target.closest("#selectContactsDiv") || !event.target.closest("#selectCategoryDiv")) {
       hideDropdown("listContacts");
       hideDropdown("listCategorys");
     }
@@ -40,9 +37,7 @@ function hideDropdown(id) {
  * Listens for clicks on the selectCategoryDiv element and toggles the visibility of the listCategorys dropdown list.
  */
 function toggleCategoryDropDownContainer() {
-  document
-    .getElementById("selectCategoryDiv")
-    .addEventListener("click", handleClick);
+  document.getElementById("selectCategoryDiv").addEventListener("click", handleClick);
 
   function handleClick(event) {
     event.stopPropagation();
@@ -54,9 +49,7 @@ function toggleCategoryDropDownContainer() {
  * Listens for clicks on the selectContactsDiv element and toggles the visibility of the listContacts dropdown list.
  */
 function toggleContactDropDownContainer() {
-  document
-    .getElementById("selectContactsDiv")
-    .addEventListener("click", handleClick);
+  document.getElementById("selectContactsDiv").addEventListener("click", handleClick);
 
   function handleClick(event) {
     event.stopPropagation();
