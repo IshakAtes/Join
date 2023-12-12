@@ -94,6 +94,7 @@ function clearContacts() {
  * @param {number} indexOfContact - The index of the contact to open.
  */
 async function openContactDetails(indexOfContact) {
+    highlightClickedContact(indexOfContact);
   if (!bigScreen()) {
     styleContactDetailsMobile();
   }
@@ -101,6 +102,23 @@ async function openContactDetails(indexOfContact) {
     SELECTED_CONTACT = CONTACTS[indexOfContact];
     playAnimationContactDetails();
     renderContactDetails();
+  }
+}
+
+/**
+ * Highlighted the clicked Contact
+ * @param {number} indexOfContact - The index of the contact to open.
+ */
+function highlightClickedContact(indexOfContact) {
+  let contact = document.getElementById("contact_" + indexOfContact);
+  let allContacts = document.querySelectorAll(".singleContact");
+  allContacts.forEach(function(contact) {
+    contact.classList.remove("active");
+  });
+  if (!contact.classList.contains("active")) {
+    contact.classList.add("active");
+  } else {
+    contact.classList.remove("active");
   }
 }
 

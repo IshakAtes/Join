@@ -11,6 +11,7 @@ function renderFirstInitialsListHtml(firstInitial) {
 function renderContactsInInitialListHtml(contact, indexOfContact) {
   return /*html*/ `
      <div
+        id="contact_${indexOfContact}"
         onclick="openContactDetails(${indexOfContact})"
         class="singleContact">
         <div style="background-color: ${contact.color}" class="initialsOfNames smallCircle">${contact.initials}</div>

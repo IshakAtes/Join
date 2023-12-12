@@ -77,7 +77,7 @@ a {
   border-radius: 15px;
 }
 
-.singleContact:hover {
+.singleContact:hover, .singleContact.active {
   background-color: var(--dark-blue);
   color: var(--bright-white);
   cursor: pointer;
