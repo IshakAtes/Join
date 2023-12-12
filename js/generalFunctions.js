@@ -258,7 +258,6 @@ function hideDisplay(id, animationClass, className) {
 async function loadUserData() {
   try {
     USERS = JSON.parse(await getItem("users"));
-    console.log("USERS SERVER", USERS);
   } catch (e) {
     console.info('Loading error:', e);
   }
@@ -276,7 +275,6 @@ async function getLoggedUser() {
     loadTemplate("../index.html");
   } else {
     LOGGED_USER = getUserData(loggedUserId);
-    console.log("LOGGED_USER:", LOGGED_USER);
   }
 }
 

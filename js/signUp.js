@@ -30,7 +30,7 @@ function checkSignUpData() {
 async function registerNewUser() {
   pushNewUserToArray();
   await setItem("users", JSON.stringify(USERS));
-  loadTemplate("summary.html");
+  loadTemplate("../index.html");
 }
 
 /**
