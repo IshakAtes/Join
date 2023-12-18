@@ -67,7 +67,6 @@ function trashHover(indexOfSubtask) {
  */
 function deleteSubTask(subtask) {
   SUBTASKS.forEach( (call, i) => {
-    console.log(call, i);
     if (call.name == subtask) {
       SUBTASKS.splice(i, 1);
       renderSubtasks();
