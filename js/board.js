@@ -50,9 +50,8 @@ function setEventsImageHoverAddTask(id) {
 
 function checkEmptySteps() {
   PROCESS_STEPS.forEach((call) => {
-    console.log(document.getElementById(call).innerHTML == "");
     if (document.getElementById(call).innerHTML == "") {
-      document.getElementById(call).innerHTML += `
+      document.getElementById(call).innerHTML = `
         <div class="emptyProcess">
           <span>No tasks ${call}</span>
         </div>
@@ -70,6 +69,7 @@ async function renderTasks() {
   TASKS.forEach((task) => {
     setDataTaskCard(task);
   });
+  checkEmptySteps();
 }
 
 /**
