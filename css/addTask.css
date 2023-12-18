@@ -317,6 +317,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  width: 100%;
 }
 
 .singleSubtask input {
@@ -329,6 +330,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   font-weight: unset;
   font-size: 12px;
 }
+
+.singleSubtask img {
+  width: 14px;
+  background-size: cover;
+  display: block;
+  /* background-image: url('../assets/img/boardDeleteTaskDarkBlue.svg'); */
+}
+
 
 .clearAndCreateBtns {
   position: absolute;

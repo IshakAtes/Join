@@ -53,9 +53,22 @@ function renderContactsHtml(name, id) {
  */
 function renderSubtasksHtml(subtask, indexOfSubtask, status) {
   return /*html*/ `
-      <div class="singleSubtask">
+      <div id="singleSubtask${indexOfSubtask}" class="singleSubtask">
         <input onclick="setStatusCheckbox(${indexOfSubtask})" ${status} type="checkbox" id="subtask${indexOfSubtask}" class="checkbox">
         <span class="subtask">${subtask.name}</span>
+        <img onmouseout="trashNormal(${indexOfSubtask})" onmouseover="trashHover(${indexOfSubtask})" id="delete${indexOfSubtask}" src="../assets/img/boardDeleteTaskDarkBlue.svg" alt="">
       </div>
     `;
+}
+
+
+function trashNormal(indexOfSubtask) {
+  trashIMG = document.getElementById(`delete${indexOfSubtask}`)
+  trashIMG.src = '../assets/img/boardDeleteTaskDarkBlue.svg';
+}
+
+
+function trashHover(indexOfSubtask) {
+  trashIMG = document.getElementById(`delete${indexOfSubtask}`);
+  trashIMG.src = '../assets/img/boardDeleteTaskBrightBlue.svg';
 }
