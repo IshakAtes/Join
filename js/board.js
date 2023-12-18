@@ -22,6 +22,7 @@ async function loadDataAndRenderTasks() {
   await loadUserData();
   await getLoggedUser();
   await renderTasks();
+  checkEmptySteps();
   toggleClass("loadingContainer", "d-none");
 }
 
@@ -46,6 +47,19 @@ function setEventsImageHoverAddTask(id) {
 }
 
 /*SHOW TASKS IN BOARD***********************************************************************************/
+
+function checkEmptySteps() {
+  PROCESS_STEPS.forEach((call) => {
+    console.log(document.getElementById(call).innerHTML == "");
+    if (document.getElementById(call).innerHTML == "") {
+      document.getElementById(call).innerHTML += `
+        <div class="emptyProcess">
+          <span>No tasks ${call}</span>
+        </div>
+      `;
+    }
+  })
+}
 
 /**
  * Renders the tasks on the board.
