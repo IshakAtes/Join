@@ -41,3 +41,36 @@ function setStatusCheckbox(indexOfSubtask) {
   }
   SUBTASKS[indexOfSubtask].status = status;
 }
+
+
+/**
+ * Render Trash icon
+ * @param {number} indexOfSubtask 
+ */
+function trashNormal(indexOfSubtask) {
+  trashIMG = document.getElementById(`delete${indexOfSubtask}`)
+  trashIMG.src = '../assets/img/boardDeleteTaskDarkBlue.svg';
+}
+
+/**
+ * Change Trash icon src onmouseover
+ * @param {number} indexOfSubtask 
+ */
+function trashHover(indexOfSubtask) {
+  trashIMG = document.getElementById(`delete${indexOfSubtask}`);
+  trashIMG.src = '../assets/img/boardDeleteTaskBrightBlue.svg';
+}
+
+/**
+ * Delete Subtask from SUBTASKS Array and Refresh Subtask Container
+ * @param {string} subtask 
+ */
+function deleteSubTask(subtask) {
+  SUBTASKS.forEach( (call, i) => {
+    console.log(call, i);
+    if (call.name == subtask) {
+      SUBTASKS.splice(i, 1);
+      renderSubtasks();
+    }
+  })
+}

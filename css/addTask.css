@@ -333,9 +333,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .singleSubtask img {
   width: 14px;
-  background-size: cover;
-  display: block;
-  /* background-image: url('../assets/img/boardDeleteTaskDarkBlue.svg'); */
 }
 
 
